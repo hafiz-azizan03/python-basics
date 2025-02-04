@@ -19,4 +19,15 @@ if height<=0.3:
     print(f"Make sure that {height}(which is your height) is in cm!")
 else:
     BMI= round(weight/height**2,1)
-    print(f"Your Body Mass Index(BMI) is {BMI}!")
+
+
+if  BMI <= 18.4:
+    status= "Underweight"
+elif 18.5 <= BMI <= 24.9:
+    status= "Normal"
+elif 25.0 <= BMI <= 39.9:
+    status= "Overweight"
+elif BMI >=40.0 :
+    status= "Obese"
+
+print(f"Your Body Mass Index(BMI) is {BMI} and according to the standardised BMI table used globally, you are {status}!")
