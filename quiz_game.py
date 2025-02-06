@@ -15,7 +15,7 @@ options = ((("A. Ag ","B. Em ","C. Au ","D. Gd ")),
            (("A. Nile River ","B. Amazon River ","C. Yangtze River ","D. Mississippi River ")),
            (("A. Eio de Janeiro ","B. Sao Paulo ","C. Brasillia ","D. Buenos Aires "))) 
 
-answers=("C","D","C","A","C") #tuple bcs we will be appending guesses, Mmake sure that we use tuples as the answers should be in order and unchangeable
+answers=("C","D","C","A","C") #tuple bcs we will be appending guesses, Make sure that we use tuples as the answers should be in order and unchangeable
 guesses= [] #make sure we sets as the guesses would be unordered and immutable(NO Duplicates)
 score=0
 question_num=0
