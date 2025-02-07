@@ -1,3 +1,20 @@
+#dictionary = a collection of {key:value} pairs ordered and changeable.NO Duplicates
+
+# print(dir(capitals)) list of all attributes available
+#print(help(capitals)) indepth descriptions
+
+capitals ={"USA":"Washington DC" ,
+          "India":"New Delhi",
+          "Malaysia":"Kuala Lumpur",
+          "Russia": "Moscow"}
+
+#print(capitals.get("USA")) - we will get the value from the key
+#capitals.popitem() clear the latest item *moscow
+#capitals.pop("India") removes the key
+#capitals.keys() returns all the keys within a dictionary
+#capitals.values() returns all the values within a dcitionary
+#capitals.items() returns a dictionary in the form of 2D tuples
+
 menu = {"Nasi Lemak(NL)": 2.00,
         "Cekodok(CK)": 0.80,
         "Karipap(KR)": 0.60,
