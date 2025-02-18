@@ -797,7 +797,25 @@
 #You finish walking Scooby Doo
 #All chores are complete!
 
-
+#Object-oriented programming Python 1
+#Class variables 35
+# inheritance 76
+# multiple inheritance 121
+# super() 183
+# polymorphism 220
+# duck typing 279
+# static methods 320
+# class methods 349
+# magic methods 377
+# property decorator method 440
+# decorator method 490
+# exception handling  530
+# file detection 560
+# writing files 590
+# reading files 680
+# dates and time 740
+# multithreading 760
+# 
 
 
 
