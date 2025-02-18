@@ -797,6 +797,38 @@
 #You finish walking Scooby Doo
 #All chores are complete!
 
+#-------------------------------------------- requesting api data --------------------------------------------
+
+#import requests
+
+#base_url = "https://pokeapi.co/api/v2/"  we use the pokemon api
+
+#def get_pokemon_info(name):
+#    url = f"{base_url}/pokemon/{name}"
+#    response = requests.get(url) #by acccessing the request model,use the get method
+
+#    if response.status_code == 200: #200 is successful http code, for example 404 is not found
+#        pokemon_data = response.json()  #the json method will help convert the data into key:value format
+#        return pokemon_data
+#    else:
+#        print(f"Failed to retrieve data {response.status_code}")
+
+#pokemon_name = "pikachu"
+#pokemon_info = get_pokemon_info(pokemon_name) #call the get_pokemon_info function and pass in the pokemon name
+
+#if pokemon_info:  #if pokemon info exists
+#    print(f"Name: {pokemon_info["name"].capitalize()}")
+#    print(f"Id: {pokemon_info["id"]}")
+#    print(f"Height: {pokemon_info["height"]}")
+#    print(f"Weight: {pokemon_info["weight"]}")
+
+#results:
+#Name: Pikachu
+#Id: 25
+#Height: 4
+#Weight: 60
+
+
 #Object-oriented programming Python 1
 #Class variables 35
 # inheritance 76
@@ -815,7 +847,7 @@
 # reading files 680
 # dates and time 740
 # multithreading 760
-# 
+# requesting api data 800
 
 
 
