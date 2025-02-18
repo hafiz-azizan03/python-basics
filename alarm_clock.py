@@ -13,7 +13,7 @@ def set_alarm(alarm_time):  #(alarm_time) parameter will be in strft format(24hr
         current_time = datetime.datetime.now().strftime("%H:%M:%S")  #access datetime module,access the class datetime and use now method. strft sets the format, percentage are format specifiers
         print(current_time)
 
-        if current_time== alarm_time:
+        if current_time>alarm_time:
             print("Wake up!! ⏰⏰")
 
             pygame.mixer.init()
