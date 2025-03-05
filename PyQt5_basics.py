@@ -1,5 +1,6 @@
 #PyQt5 intro
 # PyQt5 layouts
+#PyQt5 BUTTONS
 
 
 
@@ -115,9 +116,38 @@ if __name__ == "__main__":
 
 
 
+#PyQt5 BUTTONS
+
+import sys
+from PyQt5. QtWidgets import QMainWindow, QApplication, QPushButton, QLabel
 
 
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setGeometry(700, 300, 500, 500)
+        self.button = QPushButton("Click me!",self)
+        self.label = QLabel("HELLO!!",self)
+        self.initUI()
 
+
+    def initUI(self):
+        self.button.setGeometry(150, 200, 200, 100)
+        self.button.setStyleSheet("font-size: 30px;")
+        self.button.clicked.connect(self.on_click)        ##MAIN this is signal.connect(slot)  we take a button then . then list the type of signal, in this case which is clicked and the conect to a slot which is a method, and we invoke the on click funcyion from below
+
+        self.label.setGeometry(150, 300, 200, 100)
+        self.label.setStyleSheet("font-size: 50px;")
+    
+    
+    def on_click(self):
+        self.label.setText("Goodbye")
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+sys. exit (app.exec())
 
 
 
