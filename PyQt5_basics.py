@@ -1,9 +1,10 @@
-#PyQt5 intro
-# PyQt5 layouts
-#PyQt5 BUTTONS
-# PyQt5 Checkboxes
-#PyQt5 Radio Button
-# PyQt5LineEdit 
+#PyQt5 intro 10
+# PyQt5 layouts 70
+#PyQt5 BUTTONS 130
+# PyQt5 Checkboxes 180
+#PyQt5 Radio Button 220
+# PyQt5LineEdit 290
+# PyQt5 setStyleSheet() 330
 
 
 #PyQt5 intro
@@ -65,6 +66,7 @@ if __name__ == "__main__":
 
 
 
+
 # PyQt5 layouts
 import sys
 from PyQt5. QtWidgets import (QApplication, QMainWindow, QLabel,
@@ -118,6 +120,13 @@ if __name__ == "__main__":
 
 
 
+
+
+
+
+
+
+
 #PyQt5 BUTTONS
 
 import sys
@@ -159,6 +168,15 @@ sys. exit (app.exec())
 
 
 
+
+
+
+
+
+
+
+
+
 # PyQt5 Checkboxes
 import sys
 from PyQt5. QtWidgets import QApplication, QMainWindow, QCheckBox
@@ -189,6 +207,7 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
 sys. exit (app.exec_())
+
 
 
 
@@ -266,6 +285,8 @@ if __name__== '__main__':
 
 
 
+
+
 # PyQt5LineEdit            #in other words, text boxes
 
 import sys
@@ -298,5 +319,77 @@ if __name__== '__main__':
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
+
+
+
+
+
+
+
+# PyQt5 setStyleSheet()
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QHBoxLayout
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.button1 = QPushButton("#1")
+        self.button2 = QPushButton("#2")
+        self.button3 = QPushButton("#3")
+        self.initUI()
+
+    def initUI(self):
+        # Create a central widget for the main window
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+
+        # Create a horizontal layout
+        hbox = QHBoxLayout()
+
+        # Add buttons to the layout
+        hbox.addWidget(self.button1)
+        hbox.addWidget(self.button2)
+        hbox.addWidget(self.button3)
+
+        # Set the layout for the central widget
+        central_widget.setLayout(hbox)
+
+        # Set object names for the buttons to apply custom styles
+        self.button1.setObjectName("button1")
+        self.button2.setObjectName("button2")
+        self.button3.setObjectName("button3")
+
+        # Apply styles to the buttons
+        self.setStyleSheet("""
+            /* Global style for all QPushButton widgets */
+            QPushButton {
+                font-size: 40px;
+                font-family: Arial;
+                padding: 15px 75px; /* Top/Bottom, Left/Right */
+                margin: 25px; /* Margin between buttons */
+                border: 3px solid; /* Solid border */
+                border-radius: 15px; /* Rounded corners */
+            }
+            
+            /* Custom styles for individual buttons by object name */
+            QPushButton#button1:hover {
+                background-color: red;
+            }
+            QPushButton#button2:hover {
+                background-color: green;
+            }
+            QPushButton#button3:hover {
+                background-color: blue;
+            }
+        """)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
 
 
